@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>HTML</title>
+<style>
+.a{
+height:
+400px;
+width:25%;
+background-color:red;
+margin:auto;
+padding-top:40px;
+padding-left:20px;
+
+
+}
+.aa{
+height:50px;
+border-radius:30px;
+width:70%
+
+}
+
+.bb{
+height:40px;
+width:20%;
+border-radius:30px;
+
+}
+#div2, #div3{
+
+display: none;
+}
+.b{
+    height:
+400px;
+width:25%;
+background-color:yellowgreen;
+margin:auto;
+padding-top:40px;
+padding-left:20px;
+
+}
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<form name="form">
+<div id="div1"  class="a" ">
+
+<label for="fname">First Name:</label><br><br><input type="text" name="fname" id="fname" class="aa" required><br><br>
+<label for="lname">Last Name:</label><br><br><input type="text" name="lname" id="lname" class="aa" required><br><br><br>
+<button type="button" class="btn btn-primary bb" onclick="next1()">Next</button>
+
+</div>
+ 
+<div id="div2"  class="b">
+
+<label for="fname2">First Name:</label><br><br><input type="text" name="fname" id="fname2" class="aa"><br><br>
+<label for="lname2">Last Name:</label><br><br><input type="text" name="lname" id="lname2" class="aa" ><br><br><br>
+<button type="button" class="btn btn-success bb" onclick="next2()">next</button>
+
+</div> 
+
+<div id="div3" class="a">
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<button type="button" class="btn btn-success bb" onclick="next3()">done</button>
+
+
+</div>
+
+
+
+</form>
+
+<script>
+ 
+
+
+    function next1(){
+        
+     let x =document.getElementById('fname').value;
+  if (x == "") {
+    alert("Name must be filled out");
+    
+    }
+    else{
+        document.getElementById('div1').style.display='none';
+        document.getElementById('div2').style.display='block';
+        document.getElementById('demo').innerHTML=document.getElementById('fname').value;
+        document.getElementById('demo1').innerHTML=document.getElementById('lname').value;
+       
+    }
+    }
+    function next2(){
+        let x =document.getElementById('fname2').value;
+  if (x == "") {
+    alert("Name must be filled out");
+    
+    }
+    else{
+        
+        document.getElementById('div2').style.display='none';
+        document.getElementById('div3').style.display='block';
+        document.getElementById('demo2').innerHTML=document.getElementById('fname2').value;
+        document.getElementById('demo3').innerHTML=document.getElementById('lname2').value;
+    }
+    }
+    function next3(){
+        document.getElementById('div3').style.display='none';
+        document.getElementById('div1').style.display='block';
+    }
+
+
+</script>
+
+
+
+</body>
+</html>
